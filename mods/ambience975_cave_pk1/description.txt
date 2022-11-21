@@ -1,5 +1,0 @@
-
-Ambience 975 - Cave Pack 1
-+ 50 new scary sounds effects for caves.
-
-Base: Ambience975_Cave_Pk1
