@@ -1,0 +1,125 @@
+-- Copyright (c) 2013-18 rubenwardy and Wuzzy. MIT.
+
+local S = awards.gettext
+
+if minetest.get_modpath("ssp_base") then
+
+	-- SEND DISTRESS SIGNAL
+	awards.register_award("send_distress_signal",{
+		title = "Send Distress Signal",
+		description = "Place a distress signal",
+		prizes = {"ssp_base:metal_flooring"},
+		icon = "ssp_distress_signal.png",
+		trigger = {
+			type = "place",
+			node = "ssp_base:distress_signal",
+			target = 10,
+		}
+	})
+
+	-- REPAIR VITAL COMPUTERS
+	awards.register_award("repair_vital_computers",{
+		title = "Repair Vital Computers",
+		description = "Place 10 working computers",
+		prizes = {"ssp_base:metal_flooring"},
+		icon = "ssp_computer_front.png",
+		trigger = {
+			type = "place",
+			node = "ssp_base:computer",
+			target = 10,
+		}
+	})
+	
+	awards.register_award("repair_computers",{
+		title = "Repair Computers",
+		description = "Place 30 working computers",
+		prizes = {"ssp_base:metal_flooring"},
+		icon = "ssp_computer_broken_internal_front.png",
+		requires = {"repair_vital_computers"},
+		trigger = {
+			type = "place",
+			node = "ssp_base:computer",
+			target = 30,
+		}
+	})
+
+	-- REPLACE FILTERS
+	awards.register_award("replace_filters",{
+		title = "Replace Air Purifier's Filters",
+		description = "Place 50 filters",
+		prizes = {"ssp_base:metal_flooring"},
+		icon = "ssp_filter_fan.png",
+		trigger = {
+			type = "place",
+			node = "ssp_base:filter",
+			target = 50,
+		}
+	})
+
+	-- REFUEL ENGINES
+	awards.register_award("refuel_engines",{
+		title = "Refuel Engines",
+		description = "Place 130 stacks of coal",
+		prizes = {"ssp_base:metal_flooring"},
+		icon = "ssp_coal_stack.png",
+		trigger = {
+			type = "place",
+			node = "ssp_base:coal_stack",
+			target = 130,
+		}
+	})
+
+	-- REACTIVATE GENERATORS
+	awards.register_award("reactivate_generators",{
+		title = "Reactivate Electricity Generators",
+		description = "Reactivate 10 electricity generators, and place in new location.",
+		prizes = {"ssp_base:metal_flooring"},
+		icon = "ssp_electricity_generator_front_off.png",
+		trigger = {
+			type = "place", -- in the future, I'd like this to just be triggered when someone turns a generator on.
+			node = "ssp_base:electricity_generator_on",
+			target = 10,
+		}
+	})
+	
+	awards.register_award("reactivate_electricity",{
+		title = "Repower Electricity",
+		description = "Reactivate 30 electricity generators, and place in new location.",
+		prizes = {"ssp_base:metal_flooring"},
+		icon = "ssp_electricity_generator_front_on.png",
+		trigger = {
+			type = "place", -- in the future, I'd like this to just be triggered when someone turns a generator on.
+			node = "ssp_base:electricity_generator_on",
+			target = 30,
+		}
+	})
+	
+	--- DESTROY MUTANT SPIDER EGGS
+	awards.register_award("destory_mutant_spider_egges",{
+		title = "Destory Mutant Spider Eggs",
+		description = "Destroy 10 spider eggs",
+		prizes = {"ssp_base:metal_flooring"},
+		icon = "mobs_spawner.png",
+		trigger = {
+			type = "dig",
+			node = "ssp_base:spawner",
+			target = 10,
+		}
+	})
+	
+	awards.register_award("eliminate_mutant_spiders",{
+		title = "Eliminate Mutant Spiders",
+		description = "Destroy 30 spider eggs",
+		prizes = {"ssp_base:metal_flooring"},
+		icon = "mobs_spawner_top.png",
+		trigger = {
+			type = "dig",
+			node = "ssp_base:spawner",
+			target = 30,
+		}
+	})
+
+
+
+
+end
