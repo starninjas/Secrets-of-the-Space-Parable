@@ -44,7 +44,7 @@ minetest.register_decoration({
 	fill_ratio = 0.02,
 	noise_params = {
 			offset = 0.00000000000000001,
-			scale = 0.00007,
+			scale = 0.000007,
 			spread = {x = 250, y = 250, z = 250},
 			seed = 2,
 			octaves = 3,
@@ -69,7 +69,7 @@ minetest.register_decoration({
 	fill_ratio = 0.02,
 	noise_params = {
 			offset = 0.0000000000000000001,
-			scale = 0.00007,
+			scale = 0.000007,
 			spread = {x = 250, y = 250, z = 250},
 			seed = 2,
 			octaves = 3,
@@ -92,7 +92,7 @@ minetest.register_decoration({
 	fill_ratio = 0.02,
 	noise_params = {
 			offset = 0.0000000000000000001,
-			scale = 0.00007,
+			scale = 0.000007,
 			spread = {x = 250, y = 250, z = 250},
 			seed = 2,
 			octaves = 3,
