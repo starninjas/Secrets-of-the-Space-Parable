@@ -1,0 +1,3 @@
+This mod adds an uncraft table, it allows you to recover the resources that were necessary for a craft. You can add items/blocks yourself by completing the allow_items table
+
+Created by Troodon
