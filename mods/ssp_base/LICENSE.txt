@@ -1,0 +1,7 @@
+CODE
+- Unless otherwise stated, CC0 by StarNinjas
+- Portions of code may be from Minetest Game (GNU 2.1)
+
+MEDIA (Sounds)
+- ssp_canister_dug.1-3 <> https://opengameart.org/content/metal-and-wood-impact-sound-effects
+- ssp_metal_footstep.1-3 - default_metal_foostep.1-3 from Minetest Game. Added reverb
