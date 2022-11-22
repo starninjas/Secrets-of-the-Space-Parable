@@ -1,7 +1,7 @@
 -- gave_initial_stuff/init.lua
 
 local stuff_string = minetest.settings:get("initial_stuff") or
-		"goodtorch:flashlight_off"
+		"goodtorch:flashlight_off,ssp_base:freeze_dried_meal 3"
 
 give_initial_stuff = {
 	items = {}
