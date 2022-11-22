@@ -158,13 +158,9 @@ minetest.register_node("ssp_base:file_cabinet", {
 	drop = {
 		max_items = 3,
 		items = {
-			{items = {"ssp_base:food_cube1"}, rarity = 4},
-			{items = {"ssp_base:food_cube2"}, rarity = 3},
-			{items = {"ssp_base:food_cube3"}, rarity = 2},
-			{items = {"ssp_base:food_cube4"}, rarity = 5},
-			{items = {"ssp_base:fruit_tube1"}, rarity = 6},
-			{items = {"ssp_base:fruit_tube2"}, rarity = 6},
-			{items = {"ssp_base:fruit_tube3"}, rarity = 7},
+			{items = {"ssp_base:computer_manuel"}, rarity = 2},
+			{items = {"ssp_base:engines_manuel"}, rarity = 3},
+			{items = {"ssp_base:filter_manuel"}, rarity = 3},
 		},
 	},
 
