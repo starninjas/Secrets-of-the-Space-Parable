@@ -11,7 +11,7 @@ local tabledef = {
 
 	description = "Uncraft Table",
 
-    groups = {indestructible = 1},
+    	groups = {indestructible = 1},
 
 	tiles = {
 		"uncraft_table_top.png","uncraft_table_bottom.png",
@@ -19,6 +19,20 @@ local tabledef = {
 		"uncraft_table_front.png", "uncraft_table_front.png"
 	},
 
+	-- make it slightly large
+
+	node_box = {
+		type = "fixed",
+		fixed = {
+			{-0.5625, -0.5625, -0.5625, 0.5625, 0.625, 0.5625},
+		},
+	},
+	collison_box = {
+		type = "fixed",
+		fixed = {
+			{-0.5625, -0.5625, -0.5625, 0.5625, 0.625, 0.5625},
+		},
+	},
 
 	can_dig = function(pos, player)
 
@@ -42,6 +56,7 @@ local tabledef = {
 	end,
 
     on_receive_fields = function(pos, formname, fields, sender)
+
         if fields.bouton then
             local meta = minetest.get_meta(pos)
             local inv = meta:get_inventory()
@@ -49,6 +64,10 @@ local tabledef = {
             local playerName = sender:get_player_name()
             local input = inv:get_stack("slot", 1):get_name()
             local craft = minetest.get_craft_recipe(input)
+
+	minetest.sound_play("uncraft", {
+		gain = 1.0,
+	})
             
             if craft.items == nil or input == "" or table_contains(allow_items, input) == false then     
             else    
@@ -74,6 +93,10 @@ local tabledef = {
     end,
 
 	on_rightclick = function(pos)
+	
+	minetest.sound_play("ssp_crate_dug", {
+		gain = 0.2,
+	})
 
 		local meta = minetest.get_meta(pos)
 		local inv = meta:get_inventory()
@@ -112,7 +135,7 @@ minetest.register_decoration({
 	place_on = {"ssp_base:metal_flooring"},
 	sidelen = 16,
 	noise_params = {
-			offset = 0.0000000001,
+			offset = 0.0000001,
 			scale = 0.00007,
 			spread = {x = 250, y = 250, z = 250},
 			seed = 1,

@@ -1,3 +1,9 @@
 MIT License
 
 Copyright (c) 2022 Troodon
+
+Edits made by StarNinjas for Secrets of the Space Parable:
+- New textures
+- Made it spawn
+- Added different items
+- Made it larger then a normal node
