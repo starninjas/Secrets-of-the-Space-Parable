@@ -1,3 +1,8 @@
+Edits made by StarNinjas for Secrets of the Space Parable:
+- Removed chat message
+- Changed kick reason
+- If creative_enabled, then you will have multiple lives.
+
 
 ## YOLO - You Only Live Once
 
